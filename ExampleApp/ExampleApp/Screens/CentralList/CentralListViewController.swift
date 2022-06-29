@@ -40,7 +40,7 @@ class CentralListViewController: UITableViewController {
 
         let peripheral = scannedPeripherals[indexPath.row]
         cell.identifierLabel.text = peripheral.peripheral.identifier.uuidString
-        cell.nameLabel.text = "name: " + (peripheral.advertisementData.localName ?? "--")
+        cell.nameLabel.text = "name: " + (peripheral.peripheral.peripheral.name ?? "jjj")
         cell.rssiLabel.text = "rssi: \(peripheral.rssi.intValue)"
         return cell
     }
@@ -65,15 +65,19 @@ class CentralListViewController: UITableViewController {
     }
 
     private let bluetoothProvider: BluetoothProvider
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
 
     @objc private func startSearch() {
+        disposeBag = DisposeBag()
         bluetoothProvider.startScanning()
-            .filter { [weak self] newPeripheral in
-                guard let self = self else { return false }
-                return !self.scannedPeripherals.contains(where: { $0.peripheral.identifier == newPeripheral.peripheral.identifier })
-            }
-            .subscribe(onNext: { [weak self] in self?.scannedPeripherals.append($0) })
+            .subscribe(onNext: { [weak self] newValue in
+                if let index = self?.scannedPeripherals.firstIndex(where: { $0.peripheral.identifier == newValue.peripheral.identifier }) {
+                    self?.scannedPeripherals.remove(at: index)
+                    self?.scannedPeripherals.insert(newValue, at: index)
+                } else {
+                    self?.scannedPeripherals.append(newValue)
+                }
+            })
             .disposed(by: disposeBag)
     }
 

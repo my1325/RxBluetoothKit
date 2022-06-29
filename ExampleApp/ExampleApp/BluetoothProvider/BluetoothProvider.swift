@@ -9,9 +9,9 @@ class BluetoothProvider {
         let managerIsOn = manager.observeStateWithInitialValue()
             .filter { $0 == .poweredOn }
             .compactMap { [weak self] _ in self?.manager }
-
         connection = managerIsOn
             .flatMap { $0.scanForPeripherals(withServices: nil) }
+            .filter({ $0.peripheral.peripheral.name != nil && !$0.peripheral.peripheral.name!.isEmpty })
             .timeout(.seconds(7), scheduler: MainScheduler.instance)
             .subscribe(scannedPeripheralSubject.asObserver())
 

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36E05653B9D520CE7FDDBD8E /* Pods_ExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427434D82185776F4BC5C567 /* Pods_ExampleApp.framework */; };
 		8D117DB3254FD1DE003807B3 /* CharacteristicNotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D117DB2254FD1DE003807B3 /* CharacteristicNotifyViewController.swift */; };
 		8D117DB7254FD20D003807B3 /* CharacteristicNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D117DB6254FD20D003807B3 /* CharacteristicNotifyView.swift */; };
 		8D117DBC254FD47B003807B3 /* PeripheralWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D117DBB254FD47B003807B3 /* PeripheralWriteViewController.swift */; };
@@ -23,7 +24,6 @@
 		8D61CCA5254C554F00952B2B /* CharacteristicReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61CCA4254C554F00952B2B /* CharacteristicReadViewController.swift */; };
 		8D61CCA9254C558200952B2B /* CharacteristicReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61CCA8254C558200952B2B /* CharacteristicReadView.swift */; };
 		8D6202CB2576DAB500E66BF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6202CA2576DAB500E66BF6 /* Constants.swift */; };
-		8D72C58A2539C65000456D1A /* RxBluetoothKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D72C5892539C65000456D1A /* RxBluetoothKit */; };
 		8D72C58F2539C87300456D1A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72C58E2539C87300456D1A /* WelcomeView.swift */; };
 		8D76F72B2546B5D200FF4DDB /* CentralServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76F72A2546B5D200FF4DDB /* CentralServicesViewController.swift */; };
 		8D76F7352546C4DA00FF4DDB /* CentralServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76F7342546C4D900FF4DDB /* CentralServiceCell.swift */; };
@@ -46,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		427434D82185776F4BC5C567 /* Pods_ExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABA0F30844D3F76AE82ECAE /* Pods-ExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8D117DB2254FD1DE003807B3 /* CharacteristicNotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicNotifyViewController.swift; sourceTree = "<group>"; };
 		8D117DB6254FD20D003807B3 /* CharacteristicNotifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicNotifyView.swift; sourceTree = "<group>"; };
 		8D117DBB254FD47B003807B3 /* PeripheralWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralWriteViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		8DB15AAE253D93A800DECF92 /* PeripheralUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralUpdateView.swift; sourceTree = "<group>"; };
 		8DF924BA254ADE2C0027627D /* BluetoothProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothProvider.swift; sourceTree = "<group>"; };
 		8DF924C2254AE4F40027627D /* Error+Printable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Printable.swift"; sourceTree = "<group>"; };
+		983ECDF3FB98127368351CB4 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +94,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D72C58A2539C65000456D1A /* RxBluetoothKit in Frameworks */,
+				36E05653B9D520CE7FDDBD8E /* Pods_ExampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		255132E3A3C1B04625B3772B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				427434D82185776F4BC5C567 /* Pods_ExampleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8557755C0F9935DBDF1AD1A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8ABA0F30844D3F76AE82ECAE /* Pods-ExampleApp.debug.xcconfig */,
+				983ECDF3FB98127368351CB4 /* Pods-ExampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D117DB1254FD1C5003807B3 /* CharacteristicNotify */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +281,8 @@
 			children = (
 				8DA476A425399CFA00B79A0A /* ExampleApp */,
 				8DA476A325399CFA00B79A0A /* Products */,
+				8557755C0F9935DBDF1AD1A1 /* Pods */,
+				255132E3A3C1B04625B3772B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,18 +331,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA476B625399CFD00B79A0A /* Build configuration list for PBXNativeTarget "ExampleApp" */;
 			buildPhases = (
+				15694AE07B4B3D161A2175CB /* [CP] Check Pods Manifest.lock */,
 				8DA4769E25399CFA00B79A0A /* Sources */,
 				8DA4769F25399CFA00B79A0A /* Frameworks */,
 				8DA476A025399CFA00B79A0A /* Resources */,
+				4EBDD6F5149CED8F3BE84746 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ExampleApp;
-			packageProductDependencies = (
-				8D72C5892539C65000456D1A /* RxBluetoothKit */,
-			);
 			productName = ExampleApp;
 			productReference = 8DA476A225399CFA00B79A0A /* ExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -348,9 +369,6 @@
 				Base,
 			);
 			mainGroup = 8DA4769925399CFA00B79A0A;
-			packageReferences = (
-				8D72C5882539C65000456D1A /* XCRemoteSwiftPackageReference "RxBluetoothKit" */,
-			);
 			productRefGroup = 8DA476A325399CFA00B79A0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +389,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15694AE07B4B3D161A2175CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EBDD6F5149CED8F3BE84746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleApp/Pods-ExampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleApp/Pods-ExampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleApp/Pods-ExampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DA4769E25399CFA00B79A0A /* Sources */ = {
@@ -545,6 +605,7 @@
 		};
 		8DA476B725399CFD00B79A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABA0F30844D3F76AE82ECAE /* Pods-ExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -552,7 +613,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3EQU965GX4;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +632,7 @@
 		};
 		8DA476B825399CFD00B79A0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 983ECDF3FB98127368351CB4 /* Pods-ExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -578,7 +640,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3EQU965GX4;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,25 +679,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8D72C5882539C65000456D1A /* XCRemoteSwiftPackageReference "RxBluetoothKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Polidea/RxBluetoothKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8D72C5892539C65000456D1A /* RxBluetoothKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8D72C5882539C65000456D1A /* XCRemoteSwiftPackageReference "RxBluetoothKit" */;
-			productName = RxBluetoothKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DA4769A25399CFA00B79A0A /* Project object */;
 }
